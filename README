@@ -1,0 +1,34 @@
+Compilation:
+------------
+There are two commands available to compile the code.
+1- Debug mode
+   Use the "make.debug" script to compile the code using debug mode.
+   Command "# ./make.debug"
+2- Release mode
+   Use the "make.rel" script to compile the code using release mode.
+   Command "# ./make.rel"
+
+User can use the commands listed in the script files to compile with more options as well,
+such as
+    --enable-warnings
+    Enable the warnings during compilation process, see the "configure.ac" for list of warning flags
+    --enable-ipv6 (not implmented yet)
+    Enabling this option will allow the code to compile for ipv6 mode (yet to implement, currently working only on ipv4)
+The compilation script will look for required header files to confirm code compilation
+Required files to run the compilation script properly
+    NEWS, ChangeLog, AUTHORS, README, Makefile.am, src/*, include/*
+project options
+    Once the code is compiled and a binary "src/project0" is created
+    we can provide the following input parameters to binary
+
+    Usage: project0 [options]
+
+    Bidding process
+
+    -b, --bidders NUMBER    Set number of bidders
+    -p, --port NUMBER       Set port number for manager
+
+    if these parameters are not provided, in case of bidders, nunber bidders will be prompted from user at manager start.
+    In case of port number is not specified, default port number '5000' is used.
+
+Once the application is start, it should display the PID of Manager, PID of created bidders. The bids from bidders, and display the winner.
